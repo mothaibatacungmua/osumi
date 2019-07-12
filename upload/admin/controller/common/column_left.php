@@ -179,6 +179,14 @@ class ControllerCommonColumnLeft extends Controller {
 				);
 			}
 
+			if ($this->user->hasPermission('access', 'marketplace/mailgun')) {
+				$marketplace[] = array(
+					'name'	   => $this->language->get('text_mailgun'),
+					'href'     => $this->url->link('marketplace/mailgun', 'user_token=' . $this->session->data['user_token']),
+					'children' => array()
+				);
+			}
+
 			if ($marketplace) {
 				$data['menus'][] = array(
 					'id'       => 'menu-extension',

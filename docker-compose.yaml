@@ -1,0 +1,18 @@
+opencart:
+  image: osumi
+  ports:
+    - "8181:80"
+  links:
+    - osumidb
+  volumes:
+    - ./upload:/var/www/html
+  restart: always
+
+osumidb:
+  image: mysql:5.7
+  environment:
+    - MYSQL_ROOT_PASSWORD=root
+    - MYSQL_DATABASE=opencart
+  restart: always
+  volumes: 
+      - ./_data/mysql:/var/lib/mysql
