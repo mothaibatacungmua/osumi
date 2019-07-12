@@ -179,10 +179,10 @@ class ControllerCommonColumnLeft extends Controller {
 				);
 			}
 
-			if ($this->user->hasPermission('access', 'marketplace/mailgun')) {
+			if ($this->user->hasPermission('access', 'marketplace/spam_bot')) {
 				$marketplace[] = array(
-					'name'	   => $this->language->get('text_mailgun'),
-					'href'     => $this->url->link('marketplace/mailgun', 'user_token=' . $this->session->data['user_token']),
+					'name'	   => $this->language->get('text_spam_bot'),
+					'href'     => $this->url->link('marketplace/spam_bot', 'user_token=' . $this->session->data['user_token']),
 					'children' => array()
 				);
 			}

@@ -1,9 +1,12 @@
 <?php
 
-class ControllerMarketplaceMailgun extends Controller {
+class ControllermarketplaceSpamBot extends Controller {
     public function index() {
-        $this->load->language('marketplace/mailgun');
+        $this->load->language('marketplace/spam_bot');
         $this->document->setTitle($this->language->get('heading_title'));
+
+        $this->document->addScript('view/javascript/ckeditor/ckeditor.js');
+        $this->document->addScript('view/javascript/ckeditor/adapters/jquery.js');
         
         $data['breadcrumbs'] = array();
         $data['breadcrumbs'][] = array(
@@ -13,13 +16,13 @@ class ControllerMarketplaceMailgun extends Controller {
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('heading_title'),
-			'href' => $this->url->link('marketplace/mailgun', 'user_token=' . $this->session->data['user_token'])
+			'href' => $this->url->link('marketplace/spam_bot', 'user_token=' . $this->session->data['user_token'])
 		);
         $data['header'] = $this->load->controller('common/header');
         $data['column_left'] = $this->load->controller('common/column_left');
         $data['footer'] = $this->load->controller('common/footer');
         
 		
-        $this->response->setOutput($this->load->view('marketplace/mailgun', $data));
+        $this->response->setOutput($this->load->view('marketplace/spam_bot', $data));
 	}
 }
