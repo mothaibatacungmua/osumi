@@ -5,6 +5,7 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#narbar-menu"><i class="fas fa-bars"></i></button>
       <div class="collapse navbar-collapse" id="narbar-menu">
         <ul class="navbar-nav">
+          <li class="nav-item"> <a href="#" class="nav-link">Giới thiệu</a> <li>
           {% for category in categories %}
             {% if category.children %}
               <li class="nav-item dropdown"><a href="{{ category.href }}" class="nav-link dropdown-toggle" data-toggle="dropdown">{{ category.name }}</a>
