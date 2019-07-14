@@ -19,13 +19,13 @@
           <div class="form-group row required">
             <div class="col-sm-5">
               <div class="form-group custom-file">
-                <input type="file" class="form-control custom-file-input" id="inputGroupFile01"
-                  aria-describedby="inputGroupFileAddon01">
-                <label class="form-control custom-file-label" for="inputGroupFile01">Choose file</label>
+                <input type="file" class="form-control custom-file-input" id="csvFile"
+                  aria-describedby="csvFileAddon">
+                <label class="form-control custom-file-label" for="csvFile">Choose file</label>
               </div>
             </div>
             <div class="col-sm-2">
-              <input class="btn btn-primary mb-2" type="button" value="Send">
+              <input class="btn btn-primary mb-2" type="button" value="Send" id="csvSend">
             </div>
           </div>
           <div class="form-group row required">
@@ -46,6 +46,18 @@
 
 <script type="text/javascript"><!--
 $('textarea[data-toggle=\'ckeditor\']').ckeditor();
+
+$('#csvSend').on('click', function(){
+  $.ajax({
+		url: 'index.php?route=marketplace/spam_bot/send={{ user_token }}',
+    dataType: 'json',
+    data: { name: "Duc Tran", location: "Ho Chi Minh city" }
+    success: function(msg){
+      console(msg); 
+    }
+  });
+});
 //--></script>
+
 
 {{ footer }}

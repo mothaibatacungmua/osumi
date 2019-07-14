@@ -24,5 +24,9 @@ class ControllermarketplaceSpamBot extends Controller {
         
 		
         $this->response->setOutput($this->load->view('marketplace/spam_bot', $data));
-	}
+    }
+    
+    public function send(){
+        
+    }
 }
