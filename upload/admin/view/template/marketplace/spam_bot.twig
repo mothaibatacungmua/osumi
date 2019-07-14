@@ -51,7 +51,7 @@ $('#csvSend').on('click', function(){
   $.ajax({
 		url: 'index.php?route=marketplace/spam_bot/send={{ user_token }}',
     dataType: 'json',
-    data: { name: "Duc Tran", location: "65 street, Ho Chi Minh city" }
+    data: { name: "Duc Tran", location: " Ho Chi Minh city" }
     success: function(msg){
       console(msg); 
     }
