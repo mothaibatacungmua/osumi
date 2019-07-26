@@ -1,0 +1,25 @@
+<section class="content_bottom">
+  <div class="rd-parallax">
+    <div class="rd-parallax-inner">
+      <div style="min-height: 400px;background: transparent;" data-parallax="scroll" data-image-src="image/{{ image }}"></div>
+      <div class="rd-parallax-layer layer-0" data-type="html">
+      <div class="container">
+        <h1>
+          {% if title_1 %} 
+            {{ title_1 }}
+            {% if title_2 %}
+              <br>{{ title_2 }}
+            {% endif %}
+          {% endif %}
+        </h1>
+        <p>{{ content }}</p>
+      </div>
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+{# <div style="width:100%;">
+  
+</div> #}

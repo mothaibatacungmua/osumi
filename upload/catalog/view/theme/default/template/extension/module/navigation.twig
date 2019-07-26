@@ -1,0 +1,35 @@
+{% if categories %}
+<div class="navigation">
+  <div class="container">
+    <div class="megamenu">
+      <ul class="sf-menu sf-js-enabled sf-arrows">
+        <li><a href="#">Giới thiệu</a></li>
+        {% for category in categories %}
+          {% if category.children %}
+            <li><a href="{{ category.href }}" class="sf-with-ul">{{ category.name }}</a>
+              {% for children in category.children|batch(category.children|length / category.column|round(1, 'ceil')) %}
+                <ul class="simple_menu" style="display: none;">
+                  {% for child in children %}
+                    <li><a href="{{ child.href }}">{{ child.name }}</a></li>
+                  {% endfor %}
+                </ul>
+              {% endfor %}
+            </li>
+          {% else %}
+            <li><a href="{{ category.href }}">{{ category.name }}</a><li>
+          {% endif %}
+        {% endfor %}
+        <li><a href="#" class="nav-link">Cẩm nang</a></li>
+        <li><a href="#" class="nav-link">Ưu đãi</a></li>
+        <li><a href="#" class="nav-link">Liên hệ</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+	$(document).ready(function(){
+    $('ul.sf-menu').superfish();
+  });
+</script>
+{% endif %}

@@ -1,18 +1,18 @@
 <?php
 // Text
-$_['text_home']          = 'Home';
-$_['text_wishlist']      = 'Wish List (%s)';
-$_['text_shopping_cart'] = 'Shopping Cart';
+$_['text_home']          = 'Trang chủ';
+$_['text_wishlist']      = 'Ưa Thích (%s)';
+$_['text_shopping_cart'] = 'Giỏ hàng';
 $_['text_category']      = 'Categories';
-$_['text_account']       = 'My Account';
-$_['text_register']      = 'Register';
-$_['text_login']         = 'Login';
+$_['text_account']       = 'Tài Khoản';
+$_['text_register']      = 'Đăng Ký';
+$_['text_login']         = 'Đăng Nhập';
 $_['text_order']         = 'Order History';
 $_['text_transaction']   = 'Transactions';
 $_['text_download']      = 'Downloads';
 $_['text_logout']        = 'Logout';
-$_['text_checkout']      = 'Checkout';
-$_['text_search']        = 'Search';
+$_['text_checkout']      = 'Thanh Toán';
+$_['text_search']        = 'Tìm Kiếm';
 $_['text_all']           = 'Hiển thị tất cả';
 $_['text_setting']       = 'Store Setting';
 $_['this_website_is_using_cookies'] = "This website is using cookies.";

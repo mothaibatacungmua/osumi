@@ -1,7 +1,9 @@
 <?php
-class ControllerCommonMenu extends Controller {
-	public function index() {
-		$this->load->language('common/menu');
+class ControllerExtensionModuleNavigation extends Controller {
+    public function index() {
+        static $module = 1;
+		$this->load->language('extension/module/navigation');
+		$this->document->addScript('catalog/view/javascript/jquery/superfish/js/superfish.js');
 
 		// Menu
 		$this->load->model('catalog/category');
@@ -40,7 +42,7 @@ class ControllerCommonMenu extends Controller {
 				);
 			}
 		}
-
-		return $this->load->view('common/menu', $data);
+		
+		return $this->load->view('extension/module/navigation', $data);
 	}
 }
